@@ -34,24 +34,26 @@
   </header>
 
   <!-- NOTE Main -->
-  <main class="bg-dark-var">
+  <main class="bg-dark">
 
     <section class="container-fluid">
       <div class="row d-flex justify-content-around">
 
-        <div class="col-3 bg-card-var text-light">
-          <p class="text-end">X Jotz</p>
+        <div class="col-3 bg-card-var text-light rounded">
+          <p class="text-end" id="little-jotz-total">X Jotz</p>
           <div class="row">
             <p>Add a Jot</p>
-            <form class="d-flex flex-row align-items-center justify-content-between" action="">
+            <form class="d-flex flex-row align-items-center justify-content-between"
+              onsubmit="app.jotzController.submitNewJot()">
               <input class="col-md-2 circle-radius" type="color" name="color" value="#008000">
-              <input type="text" name="title" class="col-md-6 bg-dark-var text-light rounded" placeholder="Title">
-              <button class="col-md-3 rounded bg-info text-light">Create +</button>
+              <input type="text" name="title" required class="col-md-6 bg-dark-var text-light rounded" minlength="3"
+                maxlength="15" placeholder="Title">
+              <button name="button" class="col-md-3 rounded bg-info text-light">Create +</button>
             </form>
           </div>
           <!-- NOTE Small Cards listing -->
-          <div class="row mt-3" id="sm-card-listing">
-            <div class="border d-flex flex-column">
+          <div class="row mt-3 " id="sm-card-listing">
+            <div class="border d-flex flex-column ">
               <div class="d-flex justify-content-between">
                 <div class="heading-text col-md-5">Title</div>
                 <div class="heading-text col-md-5 text-end">updatedAt</div>
@@ -62,12 +64,47 @@
 
         </div>
 
-        <div class="col-8 area-vh100 d-flex justify-content-center p-0">
-          <div class="col-md-12 bg-bigcard-image d-flex align-items-center justify-content-center area-vh100 p-0">
-            <p class="fs-3 text-light text-shadow">Create or select a Jot to start Jottzing</p>
-          </div>
+        <div id="active-jot-area"
+          class="col-md-8 area-vh100 d-flex justify-content-center text-light bg-card-var rounded ">
+          <!--           
+          <div class="col-md-12 px-3 d-flex flex-wrap">
+            <div class="col-1 bg-light">
+              <div><img src="assets/img/bookmark-icon-element-png.webp" alt="" class="bookmark-size"></div>
+            </div>
+            <div class="col-md-11 p-3">
+              <h3>Name Of Jot Goes Here</h3>
+              <div class="col-md-8">
+                <p>Created on: PUT THE CREATED DAY IN HERE</p>
+                <p>Updated on: PUT THE updated day/time IN HERE</p>
+
+              </div>
+              <div class="col-md-8 px-3 ">
+                <button class="rounded mx-3" onclick="">🗑️Delete</button>
+                <button class="rounded mx-3" onclick="">Save 💾</button>
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <form>
+              <textarea name="body" class="mt-3 rounded bg-dark text-light fs-5 text-areaz" id="main-body"
+                rows="25"></textarea>
+                </form>
+            </div>
+
+          </div> -->
+
 
         </div>
+
+
+        <!-- NOTE This is a place holder when they start up -->
+        <!-- <div class="col-8 area-vh100 d-flex justify-content-center p-0">
+          <div class="col-md-12 bg-bigcard-image d-flex align-items-center justify-content-center area-vh100 p-0">
+            <p class="fs-3 text-light text-shadow">Create or select a Jot to start Jottzing</p>
+          </div> -->
+
+      </div>
 
 
 

@@ -3,14 +3,14 @@ import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
-
+  /**@type {Jot} */
   activeJot = null
 
   jotz = [
     new Jot({
       title: 'Flexy bootstrap',
       color: "#008000",
-      body: "Bootstrap and flexbox are not my friends.",
+      body: "Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters",
       createdAt: '8/22/1987',
       updatedAt: ''
     }),
