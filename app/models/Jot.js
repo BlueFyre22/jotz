@@ -45,14 +45,16 @@ export class Jot {
             </div>
             <div class="col-md-11 p-3">
               <h3>${this.title}</h3>
+          <form id="active-jot-form">
               <div class="col-md-8">
                 <p>Created on: ${this.createdAtDateString}</p>
                 <p>Updated on: ${this.updatedAtDateString}</p>
 
               </div>
+              
               <div class="col-md-8 px-3 ">
                 <button class="rounded mx-3" onclick="">🗑️Delete</button>
-                <button class="rounded mx-3" onclick="">Save 💾</button>
+                <button class="rounded mx-3" type="button" onclick="app.jotzcontroller.saveActiveJot()">Save 💾</button>
               </div>
             </div>
 
@@ -61,7 +63,7 @@ export class Jot {
               <textarea name="body" class="mt-3 rounded bg-dark text-light fs-5 text-areaz" id="main-body"
                 rows="25">${this.body}</textarea>
             </div>
-
+          </form>
           </div>
     `
   }

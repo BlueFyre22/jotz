@@ -48,4 +48,13 @@ export class JotzController {
     setHTML('active-jot-area', activeJot.activeJotTemplate)
   }
 
+  saveActiveJot() {
+    event.preventDefault()
+    console.log("Saving active Jot")
+    const form = document.getElementById("active-jot-form")
+    const activeJotFormData = getFormData(form)
+    console.log("active form data hopefully ==>", activeJotFormData)
+    jotzService.saveActiveJot(activeJotFormData.body, activeJotFormData.updatedAt)
+  }
+
 }

@@ -37,6 +37,13 @@ class JotzService {
     AppState.activeJot = selectedJot
   }
 
+  saveActiveJot(bodyUpdate, newUpdatedAt) {
+    AppState.activeJot.body = bodyUpdate
+    AppState.activeJot.updatedAt = newUpdatedAt
+    console.log("updated active jot's body and updated at time")
+    this.saveJotz() // not sure this is needed
+  }
+
 }
 
 export const jotzService = new JotzService
