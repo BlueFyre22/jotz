@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./assets/img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <title>jotz</title>
+</head>
+
+<body>
+  <!-- NOTE Header -->
+  <header>
+    <nav class="navbar bg-dark-var text-light gap-2 px-2">
+
+      <div><b>Jotz</b></div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- NOTE Main -->
+  <main class="bg-dark-var">
+
+    <section class="container ">
+      <div class="row">
+
+        <div class="col-3  bg-card-var text-light">
+          <p class="text-end">X Jotz</p>
+          <div class="row">
+            <p>Add a Jotz</p>
+            <form class="d-flex flex-row align-items-center justify-content-between" action="">
+              <input class="col-md-2 circle-radius" type="color" name="color" value="#008000">
+              <input type="text" name="title" class="col-md-6 bg-dark-var text-light rounded" placeholder="Title">
+              <button class="col-md-3 rounded bg-info text-light">Create +</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-9 area-vh100 d-flex justify-content-center p-0">
+          <div class="col-md-11 bg-bigcard-image d-flex align-items-center justify-content-center area-vh100 p-0">
+            <p class="fs-3 text-light text-shadow">Create or select a Jotz to start Jottzing</p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+  </main>
+
+  <footer class="bg-dark-var text-light">
+    <div class="text-center">
+      <p class="mb-0"> Welcome to the Jungle!</p>
+    </div>
+  </footer>
+
+  <!-- SECTION links for bootstrap, axios, and auth -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/Auth0Provider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- !SECTION -->
+  <!-- The start of our javascript -->
+  <script src="app/App.js" type="module"></script>
+
+</body>
+
+</html>

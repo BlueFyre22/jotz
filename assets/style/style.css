@@ -1,0 +1,63 @@
+/* BASIC STYLES HERE */
+
+:root {
+  --dark: #1f1d38;
+  --card: #282546;
+  --light: #F1ECDF;
+  --primary: #1E8DA6;
+  --secondary: #E1561B
+}
+
+.bg-dark-var {
+  background-color: var(--dark);
+}
+
+.bg-card-var {
+  background-color: var(--card);
+}
+
+.circle-radius {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+}
+
+.heading-text {
+  font-family: "Newsreader";
+}
+
+body {
+
+  font-family: "Neuton";
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bg-bigcard-image {
+  background-image: url("https://plus.unsplash.com/premium_photo-1705010662508-f6f146dce66d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRoaW5raW5nJTIwb3V0bGluZXxlbnwwfHwwfHx8MA%3D%3D");
+  background-position: center;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px black;
+}
+
+.area-vh100 {
+  height: 100vh;
+
+}
+
+main {
+  flex-grow: 1;
+
+}
+
+#pop-toast-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+}
