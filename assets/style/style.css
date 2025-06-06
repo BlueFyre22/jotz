@@ -33,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
 }
 
 .bg-bigcard-image {
@@ -54,6 +55,8 @@ main {
   flex-grow: 1;
 
 }
+
+.little-card-border {}
 
 #pop-toast-container {
   display: flex;
