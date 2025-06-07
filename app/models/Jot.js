@@ -29,6 +29,7 @@ export class Jot {
   timeStamp = new Date();
   timeFormatter = new Intl.DateTimeFormat("en-US", { dateStyle: "full" })
 
+  // was not used at all ^^
 
 
 

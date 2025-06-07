@@ -9,8 +9,6 @@ export class JotzController {
     console.log("Controller is running")
     this.drawLittleJotz()
 
-
-
     AppState.on("jotz", this.drawLittleJotz)
     AppState.on('jotz', jotzService.saveJotz)
 
@@ -18,8 +16,6 @@ export class JotzController {
     this.drawJotzNumber()
     AppState.on('activeJot', this.drawActiveJot)
     AppState.on('jotz', this.drawJotzNumber)
-
-
 
   }
 

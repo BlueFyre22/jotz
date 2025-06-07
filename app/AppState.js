@@ -8,24 +8,24 @@ class ObservableAppState extends EventEmitter {
 
   jotz = [
     new Jot({
-      title: 'Flexy bootstrap',
+      title: 'HTML',
       color: "#008000",
-      body: "Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters",
+      body: "HTML is the basic structure of a webpage. It uses tags like h1, p, and div to organize content. Every element in HTML can have attributes to provide extra information.",
       createdAt: '8/22/1987',
       updatedAt: '8/22/1987'
     }),
     new Jot({
       title: 'CSS',
       color: "#0087f5",
-      body: "CSS is ok, it makes sense that it does the same stuff everytime",
-      createdAt: '5/16/2021',
+      body: "CSS controls the look and layout of web pages. You can use CSS to change colors, fonts, spacing, and more. CSS can be written inline, in the <style> tag, or in external stylesheets.",
+      createdAt: '12/19/1988',
       updatedAt: '5/16/2021'
     }),
     new Jot({
       title: 'Javascript is fun!',
       color: "#cc23fb",
-      body: "Javascript is logical and follows rules, making it easier to learn",
-      createdAt: '11/30/1998',
+      body: "JavaScript adds interactivity and logic to websites. You can use JavaScript to respond to clicks, form input, or data changes. It runs in the browser and works with HTML and CSS to create dynamic pages",
+      createdAt: '4/4/2024',
       updatedAt: '11/30/1998'
     }),
   ]
