@@ -8,7 +8,7 @@ export class Jot {
     this.color = data.color
     this.body = data.body == undefined ? "" : data.body
     this.createdAt = data.createdAt == undefined ? new Date() : new Date(data.createdAt)
-    this.updatedAt = new Date()
+    this.updatedAt = data.updatedAt == undefined ? new Date() : new Date(data.updatedAt)
 
   }
 
@@ -38,8 +38,9 @@ export class Jot {
   }
 
   get updatedAtDateString() {
-    return new Date().toLocaleTimeString("en-US", { month: "long", day: "numeric", year: '2-digit', hour12: false, })
+    return new Date().toLocaleTimeString("en-US", { month: "long", day: "numeric", year: 'numeric', hour12: false, })
   }
+
 
 
 
@@ -60,7 +61,7 @@ export class Jot {
           
               <div class="col-md-8">
                 <p name="createdAt">Created on: ${this.createdAtDateString}</p>
-                <p name="updatedAt">Updated on: ${this.updatedAtDateString}</p>
+                <p name="updatedAt">Updated on: ${this.updatedAt}</p>
 
               </div>
               

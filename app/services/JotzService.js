@@ -18,13 +18,12 @@ class JotzService {
 
   setActiveJot(passedjotId) {
     const selectedJot = AppState.jotz.find((jot) => jot.id == passedjotId)
-    selectedJot.updatedAt = new Date()
     AppState.activeJot = selectedJot
   }
 
-  saveActiveJot(bodyUpdate, newUpdatedAt) {
+  saveActiveJot(bodyUpdate) {
     AppState.activeJot.body = bodyUpdate
-    AppState.activeJot.updatedAt = newUpdatedAt
+    AppState.activeJot.updatedAt = new Date()
     console.log("updated active jot's body and updated at time", AppState.activeJot.updatedAt)
 
     this.saveJotz()

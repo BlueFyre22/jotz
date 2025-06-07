@@ -62,8 +62,9 @@ export class JotzController {
     const activeJotFormData = getFormData(form)
     console.log("active form data hopefully ==>", activeJotFormData)
 
-    jotzService.saveActiveJot(activeJotFormData.body, activeJotFormData.updatedAt)
+    jotzService.saveActiveJot(activeJotFormData.body)
     this.drawLittleJotz()
+    this.drawActiveJot()
   }
 
   deleteJot(jotId) {
