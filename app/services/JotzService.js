@@ -12,19 +12,8 @@ class JotzService {
     jotArray.push(newJot)
   }
 
-  saveJotz() {
-    saveState('jotz', AppState.jotz)
-  }
 
-  loadJotzOnPageLoad() {
-    const jotzFromLocalStorage = loadState('jotz', [Jot])
-    if (jotzFromLocalStorage.length == 0) {
-      AppState.jotz = AppState.jotz
-    } else {
-      AppState.jotz = jotzFromLocalStorage
 
-    }
-  }
 
   // deleteJot(jotID){
   //   const jotz = AppState.jotz
@@ -41,8 +30,25 @@ class JotzService {
     AppState.activeJot.body = bodyUpdate
     AppState.activeJot.updatedAt = newUpdatedAt
     console.log("updated active jot's body and updated at time")
+
+    AppState.activeJot
     this.saveJotz() // not sure this is needed
   }
+
+  saveJotz() {
+    saveState('jotz', AppState.jotz)
+  }
+
+  loadJotzOnPageLoad() {
+    const jotzFromLocalStorage = loadState('jotz', [Jot])
+    if (jotzFromLocalStorage.length == 0) {
+      AppState.jotz = AppState.jotz
+    } else {
+      AppState.jotz = jotzFromLocalStorage
+
+    }
+  }
+
 
 }
 

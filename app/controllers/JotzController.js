@@ -13,7 +13,7 @@ export class JotzController {
     AppState.on('jotz', jotzService.saveJotz)
 
     jotzService.loadJotzOnPageLoad()
-
+    AppState.on('activeJot', this.drawActiveJot)
 
   }
 
@@ -39,7 +39,7 @@ export class JotzController {
   setActiveJot(jotId) {
     console.log("Set Active case file started")
     jotzService.setActiveJot(jotId)
-    this.drawActiveJot()
+    // this.drawActiveJot()
   }
 
   drawActiveJot() {
@@ -49,7 +49,7 @@ export class JotzController {
   }
 
   saveActiveJot() {
-    event.preventDefault()
+    // event.preventDefault()
     console.log("Saving active Jot")
     const form = document.getElementById("active-jot-form")
     const activeJotFormData = getFormData(form)
