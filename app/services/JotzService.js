@@ -1,9 +1,11 @@
 import { AppState } from "../AppState.js"
+import { JotzController } from "../controllers/JotzController.js"
 import { Jot } from "../models/Jot.js"
 import { loadState, saveState } from "../utils/Store.js"
 
 
 class JotzService {
+
   createJot(jotData) {
     console.log('🌋📒', jotData)
     const newJot = new Jot(jotData)
@@ -12,13 +14,6 @@ class JotzService {
     jotArray.push(newJot)
   }
 
-
-
-
-  // deleteJot(jotID){
-  //   const jotz = AppState.jotz
-  //   const
-  // }
 
   setActiveJot(passedjotId) {
     const selectedJot = AppState.jotz.find((jot) => jot.id == passedjotId)
@@ -29,10 +24,10 @@ class JotzService {
   saveActiveJot(bodyUpdate, newUpdatedAt) {
     AppState.activeJot.body = bodyUpdate
     AppState.activeJot.updatedAt = newUpdatedAt
-    console.log("updated active jot's body and updated at time")
+    console.log("updated active jot's body and updated at time", AppState.activeJot.updatedAt)
 
-    AppState.activeJot
-    this.saveJotz() // not sure this is needed
+    this.saveJotz()
+
   }
 
   saveJotz() {
@@ -49,6 +44,12 @@ class JotzService {
     }
   }
 
+  deleteJotz(jotId) {
+    const jotz = AppState.jotz
+    const jotIndex = jotz.findIndex(jot => jot.id == jotId)
+    console.log("trying to remove index of", jotIndex)
+    jotz.splice(jotIndex, 1)
+  }
 
 }
 

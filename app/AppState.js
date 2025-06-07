@@ -12,21 +12,21 @@ class ObservableAppState extends EventEmitter {
       color: "#008000",
       body: "Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters Bootstrap and flexbox are not my friends. This is the way to test a bunch of characters",
       createdAt: '8/22/1987',
-      updatedAt: ''
+      updatedAt: '8/22/1987'
     }),
     new Jot({
       title: 'CSS',
       color: "#0087f5",
       body: "CSS is ok, it makes sense that it does the same stuff everytime",
       createdAt: '5/16/2021',
-      updatedAt: ''
+      updatedAt: '5/16/2021'
     }),
     new Jot({
       title: 'Javascript is fun!',
-      color: "#008000",
+      color: "#cc23fb",
       body: "Javascript is logical and follows rules, making it easier to learn",
       createdAt: '11/30/1998',
-      updatedAt: ''
+      updatedAt: '11/30/1998'
     }),
   ]
 

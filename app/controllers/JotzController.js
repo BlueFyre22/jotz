@@ -9,14 +9,25 @@ export class JotzController {
     console.log("Controller is running")
     this.drawLittleJotz()
 
+
+
     AppState.on("jotz", this.drawLittleJotz)
     AppState.on('jotz', jotzService.saveJotz)
 
     jotzService.loadJotzOnPageLoad()
+    this.drawJotzNumber()
     AppState.on('activeJot', this.drawActiveJot)
+    AppState.on('jotz', this.drawJotzNumber)
+
+
 
   }
 
+  drawJotzNumber() {
+    const jotzNumber = AppState.jotz.length
+    console.log("jotzNumber", jotzNumber)
+    setHTML('little-jotz-total', `${jotzNumber} Jotz`)
+  }
 
   drawLittleJotz() {
     const jotz = AppState.jotz
@@ -31,9 +42,9 @@ export class JotzController {
     const formElem = event.target
     const jotData = getFormData(formElem)
     console.log("Submitting New Jot")
-
     jotzService.createJot(jotData)
-
+    //@ts-ignore
+    formElem.reset()
   }
 
   setActiveJot(jotId) {
@@ -54,7 +65,19 @@ export class JotzController {
     const form = document.getElementById("active-jot-form")
     const activeJotFormData = getFormData(form)
     console.log("active form data hopefully ==>", activeJotFormData)
+
     jotzService.saveActiveJot(activeJotFormData.body, activeJotFormData.updatedAt)
+    this.drawLittleJotz()
   }
 
+  deleteJot(jotId) {
+    const confirm = window.confirm("Are you sure you want to PERMANENTLY get rid of this awesome Jot!?")
+    if (!confirm) { return }
+
+    console.log("Deleting the Jot with ID of ", jotId)
+    jotzService.deleteJotz(jotId)
+
+
+
+  }
 }
