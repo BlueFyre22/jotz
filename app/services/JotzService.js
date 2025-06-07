@@ -4,6 +4,7 @@ import { Jot } from "../models/Jot.js"
 import { loadState, saveState } from "../utils/Store.js"
 
 
+
 class JotzService {
 
   createJot(jotData) {
@@ -49,6 +50,7 @@ class JotzService {
     const jotIndex = jotz.findIndex(jot => jot.id == jotId)
     console.log("trying to remove index of", jotIndex)
     jotz.splice(jotIndex, 1)
+
   }
 
 }

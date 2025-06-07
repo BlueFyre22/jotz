@@ -72,8 +72,7 @@ export class JotzController {
 
     console.log("Deleting the Jot with ID of ", jotId)
     jotzService.deleteJotz(jotId)
-
-
-
+    const activeJot = AppState.activeJot
+    setHTML('active-jot-area', activeJot.activeJotClearTemplate)
   }
 }

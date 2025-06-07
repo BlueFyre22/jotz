@@ -1,8 +1,8 @@
 /* BASIC STYLES HERE */
 
 :root {
-  --dark: #1f1d38;
-  --card: #282546;
+  --dark: #4d47a3;
+  --card: #6b62cd;
   --light: #F1ECDF;
   --primary: #1E8DA6;
   --secondary: #E1561B
@@ -55,6 +55,7 @@ body {
   background-image: url("https://plus.unsplash.com/premium_photo-1705010662508-f6f146dce66d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRoaW5raW5nJTIwb3V0bGluZXxlbnwwfHwwfHx8MA%3D%3D");
   background-position: center;
   background-size: cover;
+  margin: 3px 0px;
 }
 
 .text-shadow {

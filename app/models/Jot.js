@@ -81,4 +81,11 @@ export class Jot {
     `
   }
 
+  get activeJotClearTemplate() {
+    return `
+    <div class="col-md-12 bg-bigcard-image d-flex align-items-center justify-content-center area-vh100 p-0">
+            <p class="fs-3 text-dark  p-3 border-2">Create or select a Jot to start Jottzing</p>
+    `
+  }
+
 }
